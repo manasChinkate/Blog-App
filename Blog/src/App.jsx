@@ -8,6 +8,7 @@ import Register from './Components/Register/Register'
 import axios from 'axios'
 import Each from './Components/Each/Each'
 import EditPost from './Components/EditPost/EditPost'
+import Footer from './Components/Footer/Footer'
 
 export const userContext = createContext()
 
@@ -33,8 +34,8 @@ const App = () => {
           <Route path='/Register' element={<Register />}></Route>
           <Route path='/Post/:id' element={<Each />}></Route>
           <Route path='/Editpost/:id' element={<EditPost />}></Route>
-          
         </Routes>
+        <Footer />
 
       </BrowserRouter>
       </userContext.Provider>

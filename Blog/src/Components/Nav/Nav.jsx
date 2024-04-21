@@ -29,7 +29,7 @@ const Nav = () => {
 
 
   return (
-    <div className="bg-gray-950 text-white text-lg">
+    <div className="bg-gray-800 text-white text-lg">
 
       <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
 
@@ -55,9 +55,9 @@ const Nav = () => {
         </div>
         <div className="hidden sm:block">
           {user.username ? (
-            <button className="bg-white px-4 py-2 text-black text-sm rounded-lg" onClick={handleLogout}>Logout</button>
+            <button className="mt-2 px-4 py-1 bg-blue-500 text-white rounded text-base" onClick={handleLogout}>Logout</button>
           ) : (
-            <Link to={'/Login'}><button className="bg-white px-4 py-2 text-black text-sm rounded-lg">Login</button></Link>
+            <Link to={'/Login'}><button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded">Login</button></Link>
           )}
         </div>
       </div>
