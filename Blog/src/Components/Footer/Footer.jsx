@@ -9,22 +9,22 @@ const Footer = () => {
                     {/* Column 1 */}
                     <div className="mb-4 md:mb-0">
                         <h4 className="text-lg font-semibold mb-4">About Us</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non dui felis.</p>
+                        <p>Create and Explore the wide range of top quality blogs on our Blog-App.</p>
                     </div>
 
                     {/* Column 2 */}
-                    <div className="mb-4 md:mb-0">
+                    <div className="mb-4 md:mb-0 ml-[80px] max-[390px]: ml-0">
                         <h4 className="text-lg font-semibold mb-4">Categories</h4>
-                        <ul>
-                            <li>Technology</li>
-                            <li>Travel</li>
-                            <li>Food</li>
-                            <li>Lifestyle</li>
+                        <ul className=' cursor-pointer'>
+                            <li className=' hover:text-white transition duration-300 '>Technology</li>
+                            <li className='hover:text-white transition duration-300'>Travel</li>
+                            <li className='hover:text-white transition duration-300'>Food</li>
+                            <li className='hover:text-white transition duration-300'>Lifestyle</li>
                         </ul>
                     </div>
 
                     {/* Column 3 */}
-                    <div className="mb-4 md:mb-0">
+                    <div className="mb-4 md:mb-0 ">
                         <h4 className="text-lg font-semibold mb-4">Subscribe</h4>
                         <p>Subscribe to our newsletter for latest updates.</p>
                         <form className="mt-4">
@@ -34,7 +34,7 @@ const Footer = () => {
                     </div>
 
                     {/* Column 4 */}
-                    <div>
+                    <div className=' ml-[100px]'>
                         <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
                         <div className="flex space-x-4">
                             <a href="#" className="text-gray-300 hover:text-white transition duration-300 text-[20px]">
@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="mt-8 border-t border-gray-600 text-center">
-                <p>&copy; 2024 Your Blog. All rights reserved.</p>
+                <p className=' mt-3'>&copy; 2024 Manas Chinkate. All rights reserved.</p>
             </div>
         </footer>
     );
