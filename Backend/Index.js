@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const Usermodel = require('./Models/UserModel');
 const Postmodel = require('./Models/PostModel')
 
+require('dotenv').config()
 const app = express();
 const PORT = 3001;
 
@@ -21,8 +22,10 @@ app.use(cors({
 
 app.use(cookieParser());
 
+const database = process.env.URI
+
 // MongoDB Connection
-mongoose.connect('mongodb+srv://ManasDeveloper:manas14@cluster0.lck1f65.mongodb.net/Blog-Data')
+mongoose.connect(database)
     .then(() => {
         console.log("MongoDB connected");
     })
