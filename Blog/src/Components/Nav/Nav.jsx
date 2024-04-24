@@ -8,6 +8,8 @@ import { FaUser } from "react-icons/fa";
 const Nav = () => {
   const user = useContext(userContext)
 
+  console.log(user)
+
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,7 +18,7 @@ const Nav = () => {
   };
 
   const handleLogout = () => {
-    axios.get('https://blog-backend-n7o2.onrender.com/logout')
+    axios.get('http://localhost:3001/logout')
 
 
       .then(res => {

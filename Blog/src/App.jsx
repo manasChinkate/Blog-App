@@ -17,7 +17,7 @@ const App = () => {
   const [user, setuser] = useState({})
   axios.defaults.withCredentials = true;
   useEffect(()=>{
-    axios.get('https://blog-backend-n7o2.onrender.com/')
+    axios.get('http://localhost:3001/')
     .then(user=> 
       setuser(user.data))
     .catch(err=>console.log(err))

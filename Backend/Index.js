@@ -7,7 +7,7 @@ const Postmodel = require('./Models/PostModel')
 
 require('dotenv').config()
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT =3001;
 
 // Middleware
 app.use(express.json());
@@ -54,6 +54,7 @@ const path = require('path');
 app.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
+
         const user = await Usermodel.findOne({ email: email });
 
         if (user) {

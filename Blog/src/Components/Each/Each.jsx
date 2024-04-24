@@ -14,7 +14,7 @@ const Each = () => {
     const [post, setPost] = useState({});
 
     useEffect(() => {
-        axios.get(`https://blog-backend-n7o2.onrender.com/getpostbyid/${id}`)
+        axios.get(`http://localhost:3001/getpostbyid/${id}`)
             .then(result => setPost(result.data))
             .catch(err => console.log(err));
     }, []);

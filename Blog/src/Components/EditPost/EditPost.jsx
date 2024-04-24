@@ -23,7 +23,7 @@ const EditPost = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        axios.put('https://blog-backend-n7o2.onrender.com/editpost/' +id, {title,content}, { withCredentials: true })
+        axios.put('http://localhost:3001/editpost/' +id, {title,content}, { withCredentials: true })
         .then(res=>{
            if(res.data == "Please Login"){
             toast("Please Login first")
@@ -41,7 +41,7 @@ const EditPost = () => {
            
     }
     useEffect(()=>{
-        axios.get('https://blog-backend-n7o2.onrender.com/getpostbyid/'+id)
+        axios.get('http://localhost:3001/getpostbyid/'+id)
         .then(result=>{
             setTitle(result.data.title)
             setContent(result.data.content)

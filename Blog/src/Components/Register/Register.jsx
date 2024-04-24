@@ -13,7 +13,7 @@ const Register = () => {
 
   const HandleSubmit =(e)=>{
         e.preventDefault()
-        axios.post('https://blog-backend-n7o2.onrender.com/register', {username,email,password},{withCredentials:true})
+        axios.post('http://localhost:3001/register', {username,email,password},{withCredentials:true})
         .then(res=> {
             navigate('/Login')
         })

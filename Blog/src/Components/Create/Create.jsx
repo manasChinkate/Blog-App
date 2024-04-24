@@ -33,7 +33,7 @@ const Create = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        axios.post('https://blog-backend-n7o2.onrender.com/create', formData, { withCredentials: true })
+        axios.post('http://localhost:3001/create', formData, { withCredentials: true })
         .then(res=>{
            if(res.data == "Please Login"){
             toast("Please Login first")

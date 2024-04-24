@@ -10,9 +10,10 @@ const Home = () => {
     const [selectedOption, setSelectedOption] = useState(null);
 
     useEffect(() => {
-        axios.get('https://blog-backend-n7o2.onrender.com/getposts')
+        axios.get('http://localhost:3001/getposts')
             .then(response => {
                 const posts = response.data;
+                console.log(posts)
                 setPosts(posts);
             })
             .catch(err => console.log(err));
