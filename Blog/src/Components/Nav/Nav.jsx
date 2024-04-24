@@ -16,7 +16,7 @@ const Nav = () => {
   };
 
   const handleLogout = () => {
-    axios.get('http://localhost:3001/logout')
+    axios.get('https://blog-backend-n7o2.onrender.com/logout')
 
 
       .then(res => {
