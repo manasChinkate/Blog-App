@@ -13,7 +13,7 @@ const Footer = () => {
                     </div>
 
                     {/* Column 2 */}
-                    <div className="mb-4 md:mb-0 ml-[80px] max-[390px]: ml-0">
+                    <div className="mb-4 md:mb-0 ml-[80px] max-[390px]:ml-0">
                         <h4 className="text-lg font-semibold mb-4">Categories</h4>
                         <ul className=' cursor-pointer'>
                             <li className=' hover:text-white transition duration-300 '>Technology</li>
