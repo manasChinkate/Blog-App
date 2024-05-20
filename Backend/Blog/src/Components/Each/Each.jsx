@@ -20,7 +20,7 @@ const Each = () => {
     }, []);
 
     const handleClick = (id) => {
-        axios.delete(`http://localhost:3001/deletepost/${id}`)
+        axios.delete(`https://blog-backend-n7o2.onrender.com/deletepost/${id}`)
             .then(result => {
                 if (result.data === "success") {
                     navigate('/');
@@ -32,7 +32,7 @@ const Each = () => {
         <div className="pt-8 md:pt-16 container bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl max-w-screen-xl max-[390px]:max-w-xs mx-auto mb-8">
             <img
                 className="h-48 sm:h-64 max-[390px]:object-contain md:h-96 w-full object-cover sm:object-contain"
-                src={`http://localhost:3001/Images/${post.file}`}
+                src={`https://blog-backend-n7o2.onrender.com/Images/${post.file}`}
                 alt="Blog Image"
             />
             <div className="p-4 md:p-6">

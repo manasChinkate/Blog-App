@@ -40,18 +40,17 @@ const Home = () => {
     };
 
     return (
-        <div className='min-h-screen pt-16 bg-white flex flex-col items-center justify-center gap-8 py-9 px-9 '>
+        <div className='min-h-screen pt-16 bg-white flex flex-col items-center justify-center gap-8 pb-9'>
             <Select
                 value={selectedOption}
                 onChange={handleSort}
                 options={options}
                 placeholder="Sort by Date"
             />
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-8    ">
             {posts.map(postt => (
                 <Link to={`/Post/${postt._id}`} key={postt._id}>
-                    <div className='w-full max-w-sm md:max-w-lg max-[390px]:max-w-xs '>
-                        <div className='bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl h-[750px] border'>
+                    <div className='w-full max-w-sm md:max-w-lg max-[390px]:max-w-xs'>
+                        <div className='bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl'>
                             <img className='cursor-pointer w-full h-56 max-[390px]:object-contain sm:h-64 object-cover sm:object-contain' src={`http://localhost:3001/Images/${postt.file}`} alt="Blog Image" />
                             <div className='p-4 sm:p-6'>
                                 <h2 className='text-xl sm:text-3xl font-semibold'>{postt.title}</h2>
@@ -66,7 +65,6 @@ const Home = () => {
                     </div>
                 </Link>
             ))}
-            </div>
             <button onClick={scrollToTop} className="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 Back to Top
             </button>
